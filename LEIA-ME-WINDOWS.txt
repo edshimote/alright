@@ -1,0 +1,14 @@
+PASSO A PASSO (Windows)
+
+1) Supabase: crie um projeto, abra "SQL Editor", cole o conteúdo de supabase\schema.sql e clique em Run.
+2) Abra o arquivo .env.local (na pasta do projeto) e cole SUPABASE_URL e SUPABASE_SERVICE_ROLE_KEY
+   (Supabase > Project Settings > API; use a chave "service_role").
+3) No terminal, dentro da pasta do projeto:
+   npm install
+   node --env-file=.env.local scripts/create-admin.mjs paviocurto "p3442222@@##sda"
+   npm run dev
+4) Abra http://localhost:3000  (login admin: http://localhost:3000/admin/login)
+   Usuário: paviocurto
+
+Depois do primeiro acesso, troque a senha (ela foi exposta em conversa).
+Na Vercel: cadastre as 4 variáveis do .env.local em Settings > Environment Variables.
